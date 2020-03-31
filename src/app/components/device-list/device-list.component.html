@@ -4,10 +4,10 @@
 
 
 
-    <div class="device" id="deviceName" *ngFor="let device of deviceList ; let i=index" [ngClass]="{'active': active == i}" (click)="navigateToDevice(device);active=i;">
+    <div class="device" id="deviceNameList" *ngFor="let device of deviceList ; let i=index" [ngClass]="{'active': active == i}" (click)="navigateToDevice(device);active=i;">
       <span class="thumbnail text-left">
 
-        <div class="caption" >
+        <div class="caption" id="{{'deviceName' + i}}">
           <div>Device Name :{{device.deviceName}}   </div>
           <!-- <div>Serial Number :{{device.serialNumber}}   </div>
             <div>Software Version :{{device.firmwareVersion}}   </div>
